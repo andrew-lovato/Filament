@@ -225,9 +225,9 @@ function parseClientFilamentQuery(query) {
   function updateTempCacheObject() {
     tempTypes.push(typeMatchedWithVariable);
     typeNeedsAdding = true;
-    variableAffectedObject = tempCacheObject[typeMatchedWithVariable.trim()];
+    variableAffectedArray = tempCacheObject[typeMatchedWithVariable.trim()];
     let variableKey = Object.keys(inputObject);
-    tempArray = variableAffectedObject.filter((obj) => {
+    tempArray = variableAffectedArray.filter((obj) => {
       return obj[variableKey[0]] === inputObject[variableKey[0]];
     });
     tempCacheObject = tempArray[0];
